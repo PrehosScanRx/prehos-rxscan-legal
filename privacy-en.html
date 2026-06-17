@@ -1,248 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - Préhos RxScan</title>
-<style>
-:root{
-  --bg:#020812;--card:#081a33;--border:#1d3f70;--text:#ffffff;
-  --muted:#aab6d3;--blue:#2f6dff;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:radial-gradient(circle at top,rgba(47,109,255,.16),transparent 35%),#020812;
-  color:var(--text);font-family:Segoe UI,Arial,sans-serif;min-height:100vh;line-height:1.65;
-}
-.container{max-width:980px;margin:0 auto;padding:34px 20px 70px}
-.logo{text-align:center;margin-bottom:18px}
-.logo-img{max-width:245px;width:78%;height:auto;filter:drop-shadow(0 0 22px rgba(47,109,255,.35))}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-bottom:30px;flex-wrap:wrap}
-.nav a,.language-switch a{
-  color:white;text-decoration:none;font-weight:800;border:1px solid var(--border);
-  background:#08162d;border-radius:999px;padding:9px 16px;font-size:14px;
-}
-.language-switch{display:flex;gap:0;border:1px solid var(--border);border-radius:999px;overflow:hidden;background:#08162d}
-.language-switch a{border:0;border-radius:0}
-.language-switch a.active{background:var(--blue)}
-.card{
-  background:rgba(8,26,51,.92);border:1px solid var(--border);border-radius:22px;
-  padding:28px;box-shadow:0 12px 30px rgba(0,0,0,.22);
-}
-h1{font-size:38px;margin-bottom:8px}
-.meta{color:var(--muted);margin-bottom:26px}
-h2{font-size:24px;margin-top:28px;margin-bottom:10px;color:#ffffff}
-p,li{color:#dbe6ff;font-size:16px}
-ul{padding-left:24px;margin-top:8px}
-.footer{text-align:center;margin-top:38px;color:#8894b4;font-size:14px}
-@media(max-width:700px){.container{padding:24px 14px 55px}.card{padding:22px}h1{font-size:30px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - Préhos RxScan</title>
+  <style>
+    :root {
+      --bg: #020817;
+      --card: #071B34;
+      --card-border: #1E5AA8;
+      --text: #FFFFFF;
+      --muted: #B8D3FF;
+      --accent: #2F6DF6;
+      --accent-dark: #0B2F63;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+    .page {
+      width: min(1140px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 42px 0 60px;
+    }
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .brand img {
+      width: 190px;
+      max-width: 50vw;
+      height: auto;
+      display: block;
+    }
+    .brand-fallback {
+      display: none;
+      font-weight: 900;
+      font-size: 26px;
+      color: var(--muted);
+      letter-spacing: .2px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .back {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-weight: 800;
+      background: rgba(7, 27, 52, .8);
+    }
+    .lang {
+      display: flex;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(7, 27, 52, .8);
+    }
+    .lang a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 12px 18px;
+      font-weight: 900;
+      display: inline-block;
+    }
+    .lang a.active { background: var(--accent); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 34px 36px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.1; margin: 10px 0 24px; }
+    h2 { font-size: 28px; margin: 44px 0 14px; }
+    h3 { font-size: 21px; margin: 28px 0 8px; }
+    p { color: var(--muted); font-size: 20px; margin: 10px 0; }
+    ul { color: var(--muted); font-size: 20px; padding-left: 28px; margin: 12px 0 18px; }
+    li { margin: 7px 0; }
+    a { color: #8EC5FF; }
+    footer {
+      color: #7EA9E6;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    @media (max-width: 700px) {
+      .page { width: min(100% - 28px, 1140px); padding-top: 28px; }
+      .topbar { align-items: stretch; flex-direction: column; }
+      .lang { align-self: flex-end; }
+      .card { padding: 24px 20px; }
+      p, ul { font-size: 17px; }
+    }
+
+  </style>
 </head>
 <body>
+  <main class="page">
+    <header class="brand">
+      <img
+        src="logo-header-transparent.png"
+        alt="Préhos RxScan Logo"
+        onerror="this.onerror=null; this.src='assets/images/logo-header-transparent.png'; this.onerror=function(){this.style.display='none'; document.querySelector('.brand-fallback').style.display='block';};"
+      />
+      <div class="brand-fallback">Préhos RxScan</div>
+    </header>
 
-<div class="container">
+    <nav class="topbar">
+      <a class="back" href="index-en.html">← Back to Documents</a>
+      <div class="lang" aria-label="Language selection">
+        <a href="privacy-fr.html" class="">FR</a>
+        <a href="privacy-en.html" class="active">EN</a>
+      </div>
+    </nav>
 
-  <div class="logo">
-    <img src="assets/images/logo-header-transparent.png" alt="Préhos RxScan Logo" class="logo-img">
-  </div>
+    <section class="card">
+<h1>PRIVACY POLICY — PRÉHOS RXSCAN</h1>
+<p>Version: 1.0</p>
+<p>Effective Date: June 17, 2026</p>
+<p>Last Updated: June 17, 2026</p>
+<h2>1. Introduction</h2>
+<p>Préhos RxScan (&quot;RxScan&quot;, &quot;the Application&quot;) is committed to protecting the privacy and security of information processed through the use of the Application.</p>
+<p>This Privacy Policy explains what information may be collected, how it is used, and the choices available to users.</p>
+<h2>2. Information Collected</h2>
+<h3>Technical Information</h3>
+<p>The Application may collect certain technical information necessary for its operation, including:</p>
+<ul>
+<li>application version;</li>
+<li>accepted consent version;</li>
+<li>selected language;</li>
+<li>date and time of use;</li>
+<li>application-generated technical identifiers;</li>
+<li>error and diagnostic information.</li>
+</ul>
+<h3>Optional Information Submitted Through the Improvement Program</h3>
+<p>When a user voluntarily participates in the RxScan Improvement Program, certain information may be transmitted to improve the service, including:</p>
+<ul>
+<li>analyzed photographs;</li>
+<li>generated PDF documents;</li>
+<li>OCR results;</li>
+<li>detected medications;</li>
+<li>analyses produced by the Application;</li>
+<li>technical logs;</li>
+<li>Scan IDs;</li>
+<li>processing date and time.</li>
+</ul>
+<p>Participation in this program is entirely optional.</p>
+<h2>3. Use of Information</h2>
+<p>Collected information may be used to:</p>
+<ul>
+<li>improve medication recognition;</li>
+<li>improve OCR performance;</li>
+<li>correct software defects;</li>
+<li>improve system stability;</li>
+<li>develop new features;</li>
+<li>analyze processing errors;</li>
+<li>maintain service security and integrity.</li>
+</ul>
+<p>Information is not used for advertising purposes.</p>
+<h2>4. Consent</h2>
+<p>Certain features rely on user consent.</p>
+<p>Participation in the Improvement Program is entirely optional and may be declined without affecting normal use of the Application.</p>
+<p>Accepted consent records may be stored locally to maintain an audit trail of user permissions.</p>
+<h2>5. Data Retention</h2>
+<p>Information submitted through the Improvement Program may be retained as long as reasonably necessary for:</p>
+<ul>
+<li>issue investigation;</li>
+<li>product improvement;</li>
+<li>validation of fixes;</li>
+<li>legitimate development purposes.</li>
+</ul>
+<p>Information may be deleted when no longer required.</p>
+<h2>6. Hosting and Security</h2>
+<p>Information may be stored using cloud services utilized by Préhos RxScan to operate the Application.</p>
+<p>Reasonable safeguards are implemented to protect information against:</p>
+<ul>
+<li>unauthorized access;</li>
+<li>loss;</li>
+<li>disclosure;</li>
+<li>unauthorized modification.</li>
+</ul>
+<p>However, no information system can guarantee absolute security.</p>
+<h2>7. Information Sharing</h2>
+<p>Préhos RxScan does not sell user information.</p>
+<p>Information may be shared only:</p>
+<ul>
+<li>with technical service providers required to operate the service;</li>
+<li>when required by law;</li>
+<li>when necessary to protect the legal rights of Préhos RxScan.</li>
+</ul>
+<h2>8. Withdrawal of Consent</h2>
+<p>Users may withdraw their consent to participate in the Improvement Program at any time when such functionality is available within the Application.</p>
+<p>Withdrawal of consent does not affect the lawfulness of processing carried out before withdrawal.</p>
+<h2>9. Data Deletion Requests</h2>
+<p>Users may request deletion of voluntarily submitted information by contacting Préhos RxScan.</p>
+<p>Certain information may be retained where required by law or necessary to protect legal rights.</p>
+<h2>10. Changes to This Policy</h2>
+<p>Préhos RxScan may update this Privacy Policy at any time.</p>
+<p>The version in effect will be the version published within the Application or on the official documentation pages.</p>
+<h2>11. Contact</h2>
+<p>For questions regarding privacy or data protection:</p>
+<p>Préhos RxScan</p>
+<p>Email: <a href="mailto:prehosscanrx@gmail.com">prehosscanrx@gmail.com</a></p>
+<p>Version: 1.0</p>
+<p>Date: June 17, 2026</p>
+    </section>
 
-  <div class="nav">
-    <a href="index-en.html">← Back to Documents</a>
-    <div class="language-switch">
-      <a href="privacy-fr.html">FR</a>
-      <a class="active" href="privacy-en.html">EN</a>
-    </div>
-  </div>
-
-  <section class="card">
-
-    <h1>Privacy Policy</h1>
-
-    <div class="meta">
-      Préhos RxScan<br>
-      Legal Version: 1.0<br>
-      Effective Date: June 17, 2026<br>
-      Last Updated: June 17, 2026
-    </div>
-
-    <h2>1. Introduction</h2>
-
-    <p>
-      Préhos RxScan ("RxScan", "the Application") is committed to protecting
-      the privacy and security of information processed through the use of the Application.
-    </p>
-
-    <p>
-      This Privacy Policy explains what information may be collected,
-      how it is used, and the choices available to users.
-    </p>
-
-    <h2>2. Information Collected</h2>
-
-    <p>
-      The Application may collect certain technical information necessary for its operation, including:
-    </p>
-
-    <ul>
-      <li>application version;</li>
-      <li>accepted consent version;</li>
-      <li>selected language;</li>
-      <li>date and time of use;</li>
-      <li>application-generated technical identifiers;</li>
-      <li>error and diagnostic information.</li>
-    </ul>
-
-    <h2>3. Optional Information Submitted Through the Improvement Program</h2>
-
-    <p>
-      When users voluntarily participate in the RxScan Improvement Program,
-      certain information may be submitted to help improve the service, including:
-    </p>
-
-    <ul>
-      <li>analyzed photographs;</li>
-      <li>generated PDF reports;</li>
-      <li>OCR results;</li>
-      <li>detected medications;</li>
-      <li>analyses produced by the Application;</li>
-      <li>technical logs;</li>
-      <li>Scan IDs;</li>
-      <li>processing date and time.</li>
-    </ul>
-
-    <p>
-      Participation in this program is entirely optional.
-    </p>
-
-    <h2>4. Use of Information</h2>
-
-    <p>
-      Collected information may be used to:
-    </p>
-
-    <ul>
-      <li>improve medication recognition;</li>
-      <li>improve OCR performance;</li>
-      <li>correct software defects;</li>
-      <li>improve system stability;</li>
-      <li>develop new features;</li>
-      <li>analyze processing errors;</li>
-      <li>maintain service security and integrity.</li>
-    </ul>
-
-    <p>
-      Information is not used for advertising purposes.
-    </p>
-
-    <h2>5. Consent</h2>
-
-    <p>
-      Certain features rely on user consent.
-    </p>
-
-    <p>
-      Participation in the Improvement Program is entirely optional and may be declined without affecting normal use of the Application.
-    </p>
-
-    <p>
-      Accepted consent records may be stored locally for traceability purposes.
-    </p>
-
-    <h2>6. Data Retention</h2>
-
-    <p>
-      Information submitted through the Improvement Program may be retained as long as reasonably necessary for:
-    </p>
-
-    <ul>
-      <li>issue investigation;</li>
-      <li>product improvement;</li>
-      <li>validation of fixes;</li>
-      <li>legitimate development purposes.</li>
-    </ul>
-
-    <p>
-      Information may be deleted when it is no longer required.
-    </p>
-
-    <h2>7. Hosting and Security</h2>
-
-    <p>
-      Information may be stored using cloud services utilized by Préhos RxScan to operate the Application.
-    </p>
-
-    <p>
-      Reasonable safeguards are implemented to protect information against unauthorized access, loss, disclosure, or modification.
-    </p>
-
-    <p>
-      However, no information system can guarantee absolute security.
-    </p>
-
-    <h2>8. Information Sharing</h2>
-
-    <p>
-      Préhos RxScan does not sell user information.
-    </p>
-
-    <p>
-      Information may only be shared:
-    </p>
-
-    <ul>
-      <li>with technical providers required to operate the service;</li>
-      <li>when required by law;</li>
-      <li>when necessary to protect legal rights and interests.</li>
-    </ul>
-
-    <h2>9. Withdrawal of Consent</h2>
-
-    <p>
-      Users may withdraw their consent to participate in the Improvement Program at any time when this functionality is available within the Application.
-    </p>
-
-    <p>
-      Withdrawal of consent does not affect processing already performed prior to withdrawal.
-    </p>
-
-    <h2>10. Data Deletion Requests</h2>
-
-    <p>
-      Users may request deletion of voluntarily submitted information by contacting Préhos RxScan.
-    </p>
-
-    <p>
-      Certain information may be retained where required by law or necessary to protect legal rights.
-    </p>
-
-    <h2>11. Changes to This Policy</h2>
-
-    <p>
-      Préhos RxScan may modify this Privacy Policy at any time.
-    </p>
-
-    <p>
-      The version in effect will be the version published within the Application or on official documentation pages.
-    </p>
-
-    <h2>12. Contact</h2>
-
-    <p>
-      Préhos RxScan<br>
-      Email:
-      <a style="color:#4da3ff" href="mailto:prehosscanrx@gmail.com">
-        prehosscanrx@gmail.com
-      </a>
-    </p>
-
-  </section>
-
-  <div class="footer">
-    Préhos RxScan™ — Local data only<br>
-    © 2026 Préhos RxScan. All rights reserved.
-  </div>
-
-</div>
-
+    <footer>
+      Préhos RxScan™ — Local data only<br />
+      © 2026 Préhos RxScan. All rights reserved.
+    </footer>
+  </main>
 </body>
 </html>

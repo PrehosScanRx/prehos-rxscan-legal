@@ -1,162 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Politique de confidentialité - Préhos RxScan</title>
-<style>
-:root{
-  --bg:#020812;--card:#081a33;--border:#1d3f70;--text:#ffffff;
-  --muted:#aab6d3;--blue:#2f6dff;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:radial-gradient(circle at top,rgba(47,109,255,.16),transparent 35%),#020812;
-  color:var(--text);font-family:Segoe UI,Arial,sans-serif;min-height:100vh;line-height:1.65;
-}
-.container{max-width:980px;margin:0 auto;padding:34px 20px 70px}
-.logo{text-align:center;margin-bottom:18px}
-.logo-img{max-width:245px;width:78%;height:auto;filter:drop-shadow(0 0 22px rgba(47,109,255,.35))}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-bottom:30px;flex-wrap:wrap}
-.nav a,.language-switch a{
-  color:white;text-decoration:none;font-weight:800;border:1px solid var(--border);
-  background:#08162d;border-radius:999px;padding:9px 16px;font-size:14px;
-}
-.language-switch{display:flex;gap:0;border:1px solid var(--border);border-radius:999px;overflow:hidden;background:#08162d}
-.language-switch a{border:0;border-radius:0}
-.language-switch a.active{background:var(--blue)}
-.card{
-  background:rgba(8,26,51,.92);border:1px solid var(--border);border-radius:22px;
-  padding:28px;box-shadow:0 12px 30px rgba(0,0,0,.22);
-}
-h1{font-size:38px;margin-bottom:8px}
-.meta{color:var(--muted);margin-bottom:26px}
-h2{font-size:24px;margin-top:28px;margin-bottom:10px;color:#ffffff}
-p,li{color:#dbe6ff;font-size:16px}
-ul{padding-left:24px;margin-top:8px}
-.footer{text-align:center;margin-top:38px;color:#8894b4;font-size:14px}
-@media(max-width:700px){.container{padding:24px 14px 55px}.card{padding:22px}h1{font-size:30px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité - Préhos RxScan</title>
+  <style>
+    :root {
+      --bg: #020817;
+      --card: #071B34;
+      --card-border: #1E5AA8;
+      --text: #FFFFFF;
+      --muted: #B8D3FF;
+      --accent: #2F6DF6;
+      --accent-dark: #0B2F63;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+    .page {
+      width: min(1140px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 42px 0 60px;
+    }
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .brand img {
+      width: 190px;
+      max-width: 50vw;
+      height: auto;
+      display: block;
+    }
+    .brand-fallback {
+      display: none;
+      font-weight: 900;
+      font-size: 26px;
+      color: var(--muted);
+      letter-spacing: .2px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .back {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-weight: 800;
+      background: rgba(7, 27, 52, .8);
+    }
+    .lang {
+      display: flex;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(7, 27, 52, .8);
+    }
+    .lang a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 12px 18px;
+      font-weight: 900;
+      display: inline-block;
+    }
+    .lang a.active { background: var(--accent); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 34px 36px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.1; margin: 10px 0 24px; }
+    h2 { font-size: 28px; margin: 44px 0 14px; }
+    h3 { font-size: 21px; margin: 28px 0 8px; }
+    p { color: var(--muted); font-size: 20px; margin: 10px 0; }
+    ul { color: var(--muted); font-size: 20px; padding-left: 28px; margin: 12px 0 18px; }
+    li { margin: 7px 0; }
+    a { color: #8EC5FF; }
+    footer {
+      color: #7EA9E6;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    @media (max-width: 700px) {
+      .page { width: min(100% - 28px, 1140px); padding-top: 28px; }
+      .topbar { align-items: stretch; flex-direction: column; }
+      .lang { align-self: flex-end; }
+      .card { padding: 24px 20px; }
+      p, ul { font-size: 17px; }
+    }
+
+  </style>
 </head>
 <body>
+  <main class="page">
+    <header class="brand">
+      <img
+        src="logo-header-transparent.png"
+        alt="Préhos RxScan Logo"
+        onerror="this.onerror=null; this.src='assets/images/logo-header-transparent.png'; this.onerror=function(){this.style.display='none'; document.querySelector('.brand-fallback').style.display='block';};"
+      />
+      <div class="brand-fallback">Préhos RxScan</div>
+    </header>
 
-<div class="container">
+    <nav class="topbar">
+      <a class="back" href="index-fr.html">← Retour aux documents</a>
+      <div class="lang" aria-label="Language selection">
+        <a href="privacy-fr.html" class="active">FR</a>
+        <a href="privacy-en.html" class="">EN</a>
+      </div>
+    </nav>
 
-  <div class="logo">
-    <img src="assets/images/logo-header-transparent.png" alt="Préhos RxScan Logo" class="logo-img">
-  </div>
+    <section class="card">
+<h1>POLITIQUE DE CONFIDENTIALITÉ — PRÉHOS RXSCAN</h1>
+<p>Version : 1.0</p>
+<p>Date d&#x27;entrée en vigueur : 17 juin 2026</p>
+<p>Dernière mise à jour : 17 juin 2026</p>
+<h2>1. Introduction</h2>
+<p>Préhos RxScan (« RxScan », « l’Application ») s’engage à protéger la confidentialité et la sécurité des renseignements traités dans le cadre de l’utilisation de l’Application.</p>
+<p>La présente Politique décrit quelles informations peuvent être recueillies, comment elles sont utilisées et les choix offerts aux utilisateurs.</p>
+<h2>2. Informations recueillies</h2>
+<h3>Informations techniques</h3>
+<p>L’Application peut recueillir certaines informations techniques nécessaires à son fonctionnement, notamment :</p>
+<ul>
+<li>version de l’application;</li>
+<li>version du consentement accepté;</li>
+<li>langue sélectionnée;</li>
+<li>date et heure d’utilisation;</li>
+<li>identifiants techniques générés par l’Application;</li>
+<li>informations relatives aux erreurs ou défaillances techniques.</li>
+</ul>
+<h3>Informations facultatives transmises dans le cadre de l’auto-reporting</h3>
+<p>Lorsque l’utilisateur accepte volontairement de participer au programme d’amélioration de RxScan, certaines données peuvent être transmises afin d’améliorer le service, notamment :</p>
+<ul>
+<li>photographies analysées;</li>
+<li>documents PDF générés;</li>
+<li>résultats OCR;</li>
+<li>médicaments détectés;</li>
+<li>analyses produites par l’Application;</li>
+<li>journaux techniques;</li>
+<li>identifiants de scan (Scan ID);</li>
+<li>date et heure de traitement.</li>
+</ul>
+<p>La participation à ce programme demeure facultative.</p>
+<h2>3. Utilisation des informations</h2>
+<p>Les informations recueillies peuvent être utilisées afin de :</p>
+<ul>
+<li>améliorer la reconnaissance des médicaments;</li>
+<li>améliorer les performances OCR;</li>
+<li>corriger les bogues;</li>
+<li>améliorer la stabilité du système;</li>
+<li>développer de nouvelles fonctionnalités;</li>
+<li>analyser les erreurs de traitement;</li>
+<li>assurer la sécurité et l’intégrité du service.</li>
+</ul>
+<p>Les informations ne sont pas utilisées à des fins publicitaires.</p>
+<h2>4. Consentement</h2>
+<p>L’utilisation de certaines fonctionnalités repose sur le consentement de l’utilisateur.</p>
+<p>L’auto-reporting est entièrement facultatif et peut être refusé sans limiter l’utilisation normale de l’Application.</p>
+<p>Le consentement accepté est enregistré localement afin d’assurer la traçabilité des autorisations accordées.</p>
+<h2>5. Conservation des données</h2>
+<p>Les données transmises dans le cadre du programme d’amélioration peuvent être conservées aussi longtemps que nécessaire pour :</p>
+<ul>
+<li>l’analyse des problèmes;</li>
+<li>l’amélioration du produit;</li>
+<li>la validation des correctifs;</li>
+<li>les besoins raisonnables de développement.</li>
+</ul>
+<p>Les données peuvent être supprimées lorsqu’elles ne sont plus nécessaires.</p>
+<h2>6. Hébergement et sécurité</h2>
+<p>Les données transmises peuvent être hébergées sur des services infonuagiques utilisés par Préhos RxScan pour l’exploitation de l’Application.</p>
+<p>Des mesures raisonnables sont mises en œuvre afin de protéger les informations contre :</p>
+<ul>
+<li>l’accès non autorisé;</li>
+<li>la perte;</li>
+<li>la divulgation;</li>
+<li>la modification non autorisée.</li>
+</ul>
+<p>Aucun système informatique ne peut toutefois garantir une sécurité absolue.</p>
+<h2>7. Partage des informations</h2>
+<p>Préhos RxScan ne vend pas les informations des utilisateurs.</p>
+<p>Les informations peuvent être partagées uniquement :</p>
+<ul>
+<li>avec des fournisseurs techniques nécessaires à l’exploitation du service;</li>
+<li>lorsque requis par la loi;</li>
+<li>lorsque nécessaire à la protection des droits légaux de Préhos RxScan.</li>
+</ul>
+<h2>8. Retrait du consentement</h2>
+<p>Les utilisateurs peuvent retirer leur consentement à la participation au programme d’amélioration à tout moment lorsque cette fonctionnalité est offerte dans l’Application.</p>
+<p>Le retrait du consentement n’affecte pas la légalité des traitements effectués avant ce retrait.</p>
+<h2>9. Demande de suppression</h2>
+<p>Les utilisateurs peuvent demander la suppression des données transmises volontairement en communiquant avec Préhos RxScan.</p>
+<p>Certaines informations peuvent être conservées lorsque la loi l’exige ou lorsqu’elles sont nécessaires à la protection des droits légaux de l’organisation.</p>
+<h2>10. Modifications de la politique</h2>
+<p>Préhos RxScan peut modifier la présente Politique de confidentialité à tout moment.</p>
+<p>La version en vigueur sera celle publiée dans l’Application ou sur les pages officielles de documentation.</p>
+<h2>11. Contact</h2>
+<p>Pour toute question relative à la confidentialité ou à la protection des renseignements :</p>
+<p>Préhos RxScan</p>
+<p>Courriel : <a href="mailto:prehosscanrx@gmail.com">prehosscanrx@gmail.com</a></p>
+<p>Version : 1.0</p>
+<p>Date : 17 juin 2026</p>
+    </section>
 
-  <div class="nav">
-    <a href="index-fr.html">← Retour aux documents</a>
-    <div class="language-switch">
-      <a class="active" href="privacy-fr.html">FR</a>
-      <a href="privacy-en.html">EN</a>
-    </div>
-  </div>
-
-  <section class="card">
-    <h1>Politique de confidentialité</h1>
-    <div class="meta">
-      Préhos RxScan<br>
-      Version légale : 1.0<br>
-      Date d'entrée en vigueur : 17 juin 2026<br>
-      Dernière mise à jour : 17 juin 2026
-    </div>
-
-    <h2>1. Introduction</h2>
-    <p>Préhos RxScan (« RxScan », « l’Application ») s’engage à protéger la confidentialité et la sécurité des renseignements traités dans le cadre de l’utilisation de l’Application.</p>
-    <p>La présente Politique décrit quelles informations peuvent être recueillies, comment elles sont utilisées et les choix offerts aux utilisateurs.</p>
-
-    <h2>2. Informations recueillies</h2>
-    <p>L’Application peut recueillir certaines informations techniques nécessaires à son fonctionnement, notamment :</p>
-    <ul>
-      <li>version de l’application;</li>
-      <li>version du consentement accepté;</li>
-      <li>langue sélectionnée;</li>
-      <li>date et heure d’utilisation;</li>
-      <li>identifiants techniques générés par l’Application;</li>
-      <li>informations relatives aux erreurs ou défaillances techniques.</li>
-    </ul>
-
-    <h2>3. Informations facultatives transmises dans le cadre de l’auto-reporting</h2>
-    <p>Lorsque l’utilisateur accepte volontairement de participer au programme d’amélioration de RxScan, certaines données peuvent être transmises afin d’améliorer le service, notamment :</p>
-    <ul>
-      <li>photographies analysées;</li>
-      <li>documents PDF générés;</li>
-      <li>résultats OCR;</li>
-      <li>médicaments détectés;</li>
-      <li>analyses produites par l’Application;</li>
-      <li>journaux techniques;</li>
-      <li>identifiants de scan (Scan ID);</li>
-      <li>date et heure de traitement.</li>
-    </ul>
-    <p>La participation à ce programme demeure facultative.</p>
-
-    <h2>4. Utilisation des informations</h2>
-    <p>Les informations recueillies peuvent être utilisées afin de :</p>
-    <ul>
-      <li>améliorer la reconnaissance des médicaments;</li>
-      <li>améliorer les performances OCR;</li>
-      <li>corriger les bogues;</li>
-      <li>améliorer la stabilité du système;</li>
-      <li>développer de nouvelles fonctionnalités;</li>
-      <li>analyser les erreurs de traitement;</li>
-      <li>assurer la sécurité et l’intégrité du service.</li>
-    </ul>
-    <p>Les informations ne sont pas utilisées à des fins publicitaires.</p>
-
-    <h2>5. Consentement</h2>
-    <p>L’utilisation de certaines fonctionnalités repose sur le consentement de l’utilisateur.</p>
-    <p>L’auto-reporting est entièrement facultatif et peut être refusé sans limiter l’utilisation normale de l’Application.</p>
-    <p>Le consentement accepté est enregistré localement afin d’assurer la traçabilité des autorisations accordées.</p>
-
-    <h2>6. Conservation des données</h2>
-    <p>Les données transmises dans le cadre du programme d’amélioration peuvent être conservées aussi longtemps que nécessaire pour :</p>
-    <ul>
-      <li>l’analyse des problèmes;</li>
-      <li>l’amélioration du produit;</li>
-      <li>la validation des correctifs;</li>
-      <li>les besoins raisonnables de développement.</li>
-    </ul>
-    <p>Les données peuvent être supprimées lorsqu’elles ne sont plus nécessaires.</p>
-
-    <h2>7. Hébergement et sécurité</h2>
-    <p>Les données transmises peuvent être hébergées sur des services infonuagiques utilisés par Préhos RxScan pour l’exploitation de l’Application.</p>
-    <p>Des mesures raisonnables sont mises en œuvre afin de protéger les informations contre l’accès non autorisé, la perte, la divulgation et la modification non autorisée.</p>
-    <p>Aucun système informatique ne peut toutefois garantir une sécurité absolue.</p>
-
-    <h2>8. Partage des informations</h2>
-    <p>Préhos RxScan ne vend pas les informations des utilisateurs.</p>
-    <p>Les informations peuvent être partagées uniquement :</p>
-    <ul>
-      <li>avec des fournisseurs techniques nécessaires à l’exploitation du service;</li>
-      <li>lorsque requis par la loi;</li>
-      <li>lorsque nécessaire à la protection des droits légaux de Préhos RxScan.</li>
-    </ul>
-
-    <h2>9. Retrait du consentement</h2>
-    <p>Les utilisateurs peuvent retirer leur consentement à la participation au programme d’amélioration à tout moment lorsque cette fonctionnalité est offerte dans l’Application.</p>
-    <p>Le retrait du consentement n’affecte pas la légalité des traitements effectués avant ce retrait.</p>
-
-    <h2>10. Demande de suppression</h2>
-    <p>Les utilisateurs peuvent demander la suppression des données transmises volontairement en communiquant avec Préhos RxScan.</p>
-    <p>Certaines informations peuvent être conservées lorsque la loi l’exige ou lorsqu’elles sont nécessaires à la protection des droits légaux de l’organisation.</p>
-
-    <h2>11. Modifications de la politique</h2>
-    <p>Préhos RxScan peut modifier la présente Politique de confidentialité à tout moment.</p>
-    <p>La version en vigueur sera celle publiée dans l’Application ou sur les pages officielles de documentation.</p>
-
-    <h2>12. Contact</h2>
-    <p>Préhos RxScan<br>
-    Courriel : <a style="color:#4da3ff" href="mailto:prehosscanrx@gmail.com">prehosscanrx@gmail.com</a></p>
-  </section>
-
-  <div class="footer">
-    Préhos RxScan™ — Données locales uniquement<br>
-    © 2026 Préhos RxScan. Tous droits réservés.
-  </div>
-
-</div>
-
+    <footer>
+      Préhos RxScan™ — Données locales uniquement<br />
+      © 2026 Préhos RxScan. Tous droits réservés.
+    </footer>
+  </main>
 </body>
 </html>

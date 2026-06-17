@@ -1,217 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clinical Disclaimer - Préhos RxScan</title>
-<style>
-:root{
-  --bg:#020812;--card:#081a33;--border:#1d3f70;--text:#ffffff;
-  --muted:#aab6d3;--blue:#2f6dff;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:radial-gradient(circle at top,rgba(47,109,255,.16),transparent 35%),#020812;
-  color:var(--text);font-family:Segoe UI,Arial,sans-serif;min-height:100vh;line-height:1.65;
-}
-.container{max-width:980px;margin:0 auto;padding:34px 20px 70px}
-.logo{text-align:center;margin-bottom:18px}
-.logo-img{max-width:245px;width:78%;height:auto;filter:drop-shadow(0 0 22px rgba(47,109,255,.35))}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-bottom:30px;flex-wrap:wrap}
-.nav a,.language-switch a{
-  color:white;text-decoration:none;font-weight:800;border:1px solid var(--border);
-  background:#08162d;border-radius:999px;padding:9px 16px;font-size:14px;
-}
-.language-switch{display:flex;gap:0;border:1px solid var(--border);border-radius:999px;overflow:hidden;background:#08162d}
-.language-switch a{border:0;border-radius:0}
-.language-switch a.active{background:var(--blue)}
-.card{
-  background:rgba(8,26,51,.92);border:1px solid var(--border);border-radius:22px;
-  padding:28px;box-shadow:0 12px 30px rgba(0,0,0,.22);
-}
-h1{font-size:38px;margin-bottom:8px}
-.meta{color:var(--muted);margin-bottom:26px}
-h2{font-size:24px;margin-top:28px;margin-bottom:10px;color:#ffffff}
-p,li{color:#dbe6ff;font-size:16px}
-ul{padding-left:24px;margin-top:8px}
-.footer{text-align:center;margin-top:38px;color:#8894b4;font-size:14px}
-@media(max-width:700px){.container{padding:24px 14px 55px}.card{padding:22px}h1{font-size:30px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinical Disclaimer - Préhos RxScan</title>
+  <style>
+    :root {
+      --bg: #020817;
+      --card: #071B34;
+      --card-border: #1E5AA8;
+      --text: #FFFFFF;
+      --muted: #B8D3FF;
+      --accent: #2F6DF6;
+      --accent-dark: #0B2F63;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+    .page {
+      width: min(1140px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 42px 0 60px;
+    }
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .brand img {
+      width: 190px;
+      max-width: 50vw;
+      height: auto;
+      display: block;
+    }
+    .brand-fallback {
+      display: none;
+      font-weight: 900;
+      font-size: 26px;
+      color: var(--muted);
+      letter-spacing: .2px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .back {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-weight: 800;
+      background: rgba(7, 27, 52, .8);
+    }
+    .lang {
+      display: flex;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(7, 27, 52, .8);
+    }
+    .lang a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 12px 18px;
+      font-weight: 900;
+      display: inline-block;
+    }
+    .lang a.active { background: var(--accent); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 34px 36px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.1; margin: 10px 0 24px; }
+    h2 { font-size: 28px; margin: 44px 0 14px; }
+    h3 { font-size: 21px; margin: 28px 0 8px; }
+    p { color: var(--muted); font-size: 20px; margin: 10px 0; }
+    ul { color: var(--muted); font-size: 20px; padding-left: 28px; margin: 12px 0 18px; }
+    li { margin: 7px 0; }
+    a { color: #8EC5FF; }
+    footer {
+      color: #7EA9E6;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    @media (max-width: 700px) {
+      .page { width: min(100% - 28px, 1140px); padding-top: 28px; }
+      .topbar { align-items: stretch; flex-direction: column; }
+      .lang { align-self: flex-end; }
+      .card { padding: 24px 20px; }
+      p, ul { font-size: 17px; }
+    }
+
+  </style>
 </head>
 <body>
+  <main class="page">
+    <header class="brand">
+      <img
+        src="logo-header-transparent.png"
+        alt="Préhos RxScan Logo"
+        onerror="this.onerror=null; this.src='assets/images/logo-header-transparent.png'; this.onerror=function(){this.style.display='none'; document.querySelector('.brand-fallback').style.display='block';};"
+      />
+      <div class="brand-fallback">Préhos RxScan</div>
+    </header>
 
-<div class="container">
+    <nav class="topbar">
+      <a class="back" href="index-en.html">← Back to Documents</a>
+      <div class="lang" aria-label="Language selection">
+        <a href="clinical-fr.html" class="">FR</a>
+        <a href="clinical-en.html" class="active">EN</a>
+      </div>
+    </nav>
 
-  <div class="logo">
-    <img src="../assets/images/logo-header-transparent.png" alt="Préhos RxScan Logo" class="logo-img">
-  </div>
+    <section class="card">
+<h1>CLINICAL DISCLAIMER — PRÉHOS RXSCAN</h1>
+<p>Version: 1.0</p>
+<p>Effective Date: June 17, 2026</p>
+<p>Last Updated: June 17, 2026</p>
+<h2>IMPORTANT</h2>
+<p>Préhos RxScan (&quot;RxScan&quot;) is a medication identification and interpretation support tool intended for informational, educational, and assistance purposes only.</p>
+<p>The Application is not a certified medical device and must not be considered a sole source for clinical decision-making.</p>
+<h2>NO DIAGNOSIS</h2>
+<p>RxScan:</p>
+<ul>
+<li>does not diagnose any disease or condition;</li>
+<li>does not confirm any diagnosis;</li>
+<li>does not rule out any medical condition;</li>
+<li>does not replace a clinical assessment.</li>
+</ul>
+<p>Any diagnostic decision must be based on a complete clinical evaluation performed by a qualified healthcare professional.</p>
+<h2>NO TREATMENT RECOMMENDATIONS</h2>
+<p>RxScan:</p>
+<ul>
+<li>does not prescribe medications;</li>
+<li>does not recommend treatments;</li>
+<li>does not modify clinical protocols;</li>
+<li>does not replace medical orders;</li>
+<li>does not provide personalized medical advice.</li>
+</ul>
+<p>Information generated by the Application must never be interpreted as a treatment recommendation.</p>
+<h2>OCR AND ANALYSIS LIMITATIONS</h2>
+<p>The Application may use optical character recognition (OCR), medication databases, and analytical algorithms.</p>
+<p>These mechanisms may produce:</p>
+<ul>
+<li>identification errors;</li>
+<li>omissions;</li>
+<li>incomplete results;</li>
+<li>inaccurate interpretations;</li>
+<li>outdated information.</li>
+</ul>
+<p>Results must always be validated using appropriate references and professional judgment.</p>
+<h2>USER RESPONSIBILITY</h2>
+<p>Users remain fully responsible for:</p>
+<ul>
+<li>validating displayed information;</li>
+<li>interpreting results;</li>
+<li>complying with applicable protocols;</li>
+<li>following medical directives;</li>
+<li>making clinical decisions.</li>
+</ul>
+<p>No clinical decision should be based solely on information generated by RxScan.</p>
+<h2>INFORMATION SOURCES</h2>
+<p>Although reasonable efforts are made to maintain accurate information, Préhos RxScan does not guarantee:</p>
+<ul>
+<li>completeness of information;</li>
+<li>data accuracy;</li>
+<li>absence of errors;</li>
+<li>continuous service availability.</li>
+</ul>
+<p>Users should consult official references whenever appropriate.</p>
+<h2>BETA VERSION</h2>
+<p>The Application may be distributed as part of a beta testing or validation program.</p>
+<p>In this context:</p>
+<ul>
+<li>certain features may be incomplete;</li>
+<li>analyses may be inaccurate;</li>
+<li>some information may be missing;</li>
+<li>technical failures may occur.</li>
+</ul>
+<p>Use of the beta version is entirely at the user&#x27;s own risk.</p>
+<h2>LIMITATION OF LIABILITY</h2>
+<p>To the fullest extent permitted by law, Préhos RxScan, its developers, collaborators, and representatives shall not be liable for consequences arising from:</p>
+<ul>
+<li>medication identification errors;</li>
+<li>analysis errors;</li>
+<li>omitted information;</li>
+<li>service interruptions;</li>
+<li>decisions made based on information generated by the Application.</li>
+</ul>
+<p>Users remain solely responsible for their professional actions and clinical decisions.</p>
+<h2>CONTACT</h2>
+<p>Préhos RxScan</p>
+<p>Email: <a href="mailto:prehosscanrx@gmail.com">prehosscanrx@gmail.com</a></p>
+<p>Version: 1.0</p>
+<p>Date: June 17, 2026</p>
+    </section>
 
-  <div class="nav">
-    <a href="index-en.html">← Back to Documents</a>
-    <div class="language-switch">
-      <a href="clinical-fr.html">FR</a>
-      <a class="active" href="clinical-en.html">EN</a>
-    </div>
-  </div>
-
-  <section class="card">
-
-    <h1>Clinical Disclaimer</h1>
-
-    <div class="meta">
-      Préhos RxScan<br>
-      Legal Version: 1.0<br>
-      Effective Date: June 17, 2026<br>
-      Last Updated: June 17, 2026
-    </div>
-
-    <h2>Important Notice</h2>
-
-    <p>
-      Préhos RxScan ("RxScan") is a medication identification and interpretation support tool intended for informational, educational, and assistance purposes only.
-    </p>
-
-    <p>
-      The Application is not a certified medical device and must not be considered a sole source for clinical decision-making.
-    </p>
-
-    <h2>No Diagnosis</h2>
-
-    <p>RxScan:</p>
-
-    <ul>
-      <li>does not provide medical diagnoses;</li>
-      <li>does not confirm diseases or conditions;</li>
-      <li>does not exclude medical conditions;</li>
-      <li>does not replace clinical assessment.</li>
-    </ul>
-
-    <p>
-      Any diagnostic decision must be based on a complete clinical evaluation performed by a qualified healthcare professional.
-    </p>
-
-    <h2>No Treatment Recommendations</h2>
-
-    <p>RxScan:</p>
-
-    <ul>
-      <li>does not prescribe medications;</li>
-      <li>does not recommend treatments;</li>
-      <li>does not modify clinical protocols;</li>
-      <li>does not replace medical orders;</li>
-      <li>does not provide personalized medical advice.</li>
-    </ul>
-
-    <p>
-      Information generated by the Application must never be interpreted as a treatment recommendation.
-    </p>
-
-    <h2>OCR and Analysis Limitations</h2>
-
-    <p>
-      The Application may use optical character recognition (OCR), medication databases, and analytical algorithms.
-    </p>
-
-    <p>
-      These technologies may produce:
-    </p>
-
-    <ul>
-      <li>identification errors;</li>
-      <li>omissions;</li>
-      <li>incomplete results;</li>
-      <li>inaccurate interpretations;</li>
-      <li>outdated information.</li>
-    </ul>
-
-    <p>
-      Results must always be validated using appropriate references and professional judgment.
-    </p>
-
-    <h2>User Responsibility</h2>
-
-    <p>
-      Users remain fully responsible for validating displayed information,
-      interpreting results,
-      complying with applicable protocols,
-      applying medical directives,
-      and making clinical decisions.
-    </p>
-
-    <p>
-      No clinical decision should be made solely on the basis of information generated by RxScan.
-    </p>
-
-    <h2>Information Sources</h2>
-
-    <p>
-      While reasonable efforts are made to maintain accurate information,
-      Préhos RxScan does not guarantee:
-    </p>
-
-    <ul>
-      <li>completeness of information;</li>
-      <li>accuracy of information;</li>
-      <li>up-to-date content;</li>
-      <li>continuous service availability;</li>
-      <li>absence of errors.</li>
-    </ul>
-
-    <p>
-      Users should consult official references whenever appropriate.
-    </p>
-
-    <h2>Beta Version</h2>
-
-    <p>
-      The Application may be distributed as part of a beta program or validation phase.
-    </p>
-
-    <p>
-      During this period, certain features may be incomplete,
-      analyses may be inaccurate,
-      information may be missing,
-      and technical failures may occur.
-    </p>
-
-    <p>
-      Use of the beta version is entirely at the user's own risk.
-    </p>
-
-    <h2>Limitation of Liability</h2>
-
-    <p>
-      To the fullest extent permitted by law,
-      Préhos RxScan, its developers, collaborators, and representatives
-      shall not be liable for any consequences arising from medication identification errors,
-      analysis errors,
-      omitted information,
-      service interruptions,
-      or decisions made based on Application-generated results.
-    </p>
-
-    <p>
-      Users remain solely responsible for their professional actions and clinical decisions.
-    </p>
-
-    <h2>Contact</h2>
-
-    <p>
-      Préhos RxScan<br>
-      Email:
-      <a style="color:#4da3ff" href="mailto:prehosscanrx@gmail.com">
-      prehosscanrx@gmail.com
-      </a>
-    </p>
-
-  </section>
-
-  <div class="footer">
-    Préhos RxScan™ — Local data only<br>
-    © 2026 Préhos RxScan. All rights reserved.
-  </div>
-
-</div>
-
+    <footer>
+      Préhos RxScan™ — Local data only<br />
+      © 2026 Préhos RxScan. All rights reserved.
+    </footer>
+  </main>
 </body>
 </html>
